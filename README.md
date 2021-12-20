@@ -35,5 +35,3 @@ Created a NavBar component with the buttons to connect Metamask wallet, save wal
 Installed node types to use `process.env` with `npm install @types/node --save-dev`
 
 Fixed @ imports in `vite.config.js`
-
-Install `ethers` to save provider in wallet store
