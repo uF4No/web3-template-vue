@@ -22,15 +22,15 @@ This projects includes multiple features out of the box including:
 
 Created new Vite project with `npm init vite@latest web3-template-vue `
 
-Installed all dependenciess
+Installed all dependenciess `npm install`
 
-Installed TailwindCSS following the official guide https://tailwindcss.com/docs/guides/vite
+Installed TailwindCSS following [the official guide](https://tailwindcss.com/docs/guides/vite)
 
-Installed Pinia and created a basic wallet store
+Installed Pinia `npm i pinia` and created a basic wallet store in `src/store/wallet.ts`
 
 Installed vue-router (v4) and created a couple of views
 
-Created a NAvBar component with the buttons to connect Metamask wallet, save wallet info in store and navigate between routes
+Created a NavBar component with the buttons to connect Metamask wallet, save wallet info in store and navigate between routes
 
 Installed node types to use `process.env` with `npm install @types/node --save-dev`
 
