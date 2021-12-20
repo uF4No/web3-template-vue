@@ -1,13 +1,24 @@
 <template>
-  <div class="pt-12">
-    <h1 class="text-center text-2xl">This is the Home page</h1>
+  <div class="text-center pt-12">
+    <h1 class="text-2xl mb-8">This is the Home page</h1>
+    <p v-if="walletStore.address != ''">
+      Your wallet address is: {{ walletStore.address }}
+    </p>
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
 
+import { useWalletStore } from '../stores/wallet'
+
 export default defineComponent({
-  setup() {},
+  setup() {
+    const walletStore = useWalletStore()
+
+    return {
+      walletStore,
+    }
+  },
 })
 </script>

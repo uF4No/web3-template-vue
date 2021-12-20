@@ -1,14 +1,20 @@
 import { defineStore } from 'pinia'
 
+interface WalletData {
+  address: string
+}
+
 export const useWalletStore = defineStore('wallet', {
   state: () => {
-    return { walletData: null }
+    return {
+      address: '',
+    }
   },
 
   actions: {
     //@ts-ignore
-    saveWalletData(payload: any) {
-      this.walletData = payload
+    saveWalletData(payload: WalletData) {
+      this.address = payload.address
     },
   },
 })

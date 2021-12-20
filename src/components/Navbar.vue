@@ -112,10 +112,8 @@
           <div class="flex-shrink-0">
             <button
               type="button"
-              :disabled="walletStore.walletData != null"
-              :class="
-                walletStore.walletData == null ? 'hover:bg-indigo-600' : ''
-              "
+              :disabled="walletStore.address != ''"
+              :class="walletStore.address == '' ? 'hover:bg-indigo-600' : ''"
               @click="connectWallet()"
               class="
                 relative
@@ -150,11 +148,11 @@
                 />
               </svg>
               <span class="">{{
-                walletStore.walletData != null
-                  ? `Connected ${walletStore.walletData.slice(
+                walletStore.address != ''
+                  ? `Connected ${walletStore.address.slice(
                       0,
                       2
-                    )}...${walletStore.walletData.slice(-4)}`
+                    )}...${walletStore.address.slice(-4)}`
                   : `Connect Wallet`
               }}</span>
             </button>
@@ -211,7 +209,7 @@ import { useWalletStore } from '../stores/wallet'
 export default defineComponent({
   setup() {
     const walletStore = useWalletStore()
-    const isOpen = ref(false)
+    const isOpen = ref<boolean>(false)
 
     const connectWallet = async () => {
       try {
@@ -220,11 +218,12 @@ export default defineComponent({
           method: 'eth_requestAccounts',
         })
         console.log('data :>> ', data)
-        // this.userAddress = data[0]
-        walletStore.saveWalletData(data[0])
+
+        walletStore.saveWalletData({ address: data[0] })
         console.log('DApp connected to your wallet 💰')
       } catch (error) {
         console.error('Error connecting DApp to your wallet')
+        console.error(error)
       }
     }
     return {
