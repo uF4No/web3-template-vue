@@ -4,6 +4,7 @@
     <p v-if="walletStore.address != ''">
       Your wallet address is: {{ walletStore.address }}
     </p>
+    <p v-else>You've not connected your wallet yet</p>
   </div>
 </template>
 
