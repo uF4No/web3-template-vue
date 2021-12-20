@@ -1,21 +1,20 @@
-# Vue 3 + Typescript + Vite
+# Web 3.0 template
 
-This template should help get you started developing a web3.0 application with Vue.js, TailwindCSS and Typescript. This is a work in progress project and I'll be adding new features.
+This template should help get you started developing a web3.0 application with Vue.js (v3), TailwindCSS and Typescript. This is a work in progress project and I'll be adding new features.
 
 ## Features
 
 This projects includes multiple features out of the box including:
 
 - Metamask wallet integration: there is a "Connect Wallet" button that triggers Metamask authorization
-- State management with Pinia: the metamask wallet account info is kept in a store. That way, it can be accessed from multiple views and components.
-
+- State management: the metamask wallet account info is kept in a store using Pinia. That way, it can be accessed from multiple views and components.
 - TailwindCSS integration
 - Vue router
 
 ## To-Do:
 
-- [ ] Disconnect wallet
 - [ ] Identify if connected blockchain is the correct one.
+- [ ] Disconnect wallet button
 - [ ] Support for multiple accounts instead of just one
 - [ ] Support for other wallets
 
