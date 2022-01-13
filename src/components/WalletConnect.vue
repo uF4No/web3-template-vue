@@ -50,12 +50,6 @@ export default defineComponent({
     const targetNetworkId = import.meta.env.VITE_BLOCKCHAIN_NETWORK_ID
     const network_ok = ref<boolean>(false)
 
-    console.log('targetNetworkId :>> ', targetNetworkId)
-
-    console.log(
-      'targetNetworkId?.toString(16).toUpperCase() :>> ',
-      targetNetworkId.toString(16).toUpperCase()
-    )
     // checks if current chain matches with the one provided in env variable
     const checkNetwork = async () => {
       if (window.ethereum) {
