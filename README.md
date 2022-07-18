@@ -18,6 +18,10 @@ This projects includes multiple features out of the box including:
 - TailwindCSS integration
 - Vue router
 
+## Environment variables
+
+Rename the `.env.example` file to `.env` and change the variables to the protocol name and id (in 0x format) for your project.
+
 ## Done
 
 - [x] Identify if connected blockchain is the correct one.
